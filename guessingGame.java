@@ -10,17 +10,18 @@ public class GuessingGame
 {
 	public static void main(String[] args)
 	{
-		int userInput;
+		int userInput, count;
 		Scanner keyboard = new Scanner(System.in);
 		Random rGen = new Random();
 		int randomInt = rGen.nextInt(10);
 		//System.out.println(randomInt);
 		System.out.println("Please enter an integer between 1 and 10");
 		userInput = keyboard.nextInt();
-		
+		count = 1;
+
 		while (userInput != randomInt)
 		{
-
+			count++;
 			if (userInput == randomInt)
 			{
 				System.out.println("Congratualtions! You guessed correctly! *Fireworks*");
@@ -35,6 +36,7 @@ public class GuessingGame
 			}
 		}
 		System.out.println("Congratulations, You have guessed correctly! *Fireworks*");
+		System.out.println("It took you " + count + " tries to guess the number!");
 		
 		
 	}
