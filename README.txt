@@ -1,1 +1,1 @@
-Demo program.
+"Program now supports multiple guesses"!

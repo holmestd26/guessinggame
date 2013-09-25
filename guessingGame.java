@@ -18,20 +18,24 @@ public class GuessingGame
 		System.out.println("Please enter an integer between 1 and 10");
 		userInput = keyboard.nextInt();
 		
-		if (userInput == randomInt)
+		while (userInput != randomInt)
 		{
-			System.out.println("Congratualtions! You guessed correctly! *Fireworks*");
+
+			if (userInput == randomInt)
+			{
+				System.out.println("Congratualtions! You guessed correctly! *Fireworks*");
+			}
+			else if (userInput > randomInt)
+			{
+				System.out.println("Too high! The number is: " + randomInt);
+			}
+			else if (userInput < randomInt)
+			{
+				System.out.println("Too low! The number is: " + randomInt);
+			}
 		}
-		else if (userInput > randomInt)
-		{
-			System.out.println("Too high! The number is: " + randomInt);
-		}
-		else if (userInput < randomInt)
-		{
-			System.out.println("Too low! The number is: " + randomInt);
-		}
+		System.out.println("Congratulations, You have guessed correctly! *Fireworks*");
 		
 		
 	}
 }
-
